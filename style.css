@@ -1,0 +1,615 @@
+/* --- Midnight Bloom Theme Colors --- */
+:root {
+    --color-primary-accent: #5A2D5C;       /* Deep Plum Purple */
+    --color-secondary-accent: #D4AF37;     /* Soft Gold */
+    --color-text-dark: #2E2E2E;            /* Charcoal */
+    --color-text-light: #F8F8F8;          /* Off-White */
+    --color-background-light: #F7F3E9;    /* Champagne Beige */
+    --color-background-medium: #EBEAE5;    /* Light Greyish Beige */
+    --color-background-dark: #1C2A4A;      /* Midnight Blue (for header/footer accent) */
+    --color-card-background: #FFFFFF;     /* Pure White for clean cards */
+    --color-whatsapp: #25D366;             /* Standard WhatsApp green */
+    --color-gmail: #D44638;                /* Standard Gmail red */
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primary-accent);
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary-accent);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-secondary-accent);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--color-primary-accent);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-primary-accent);
+}
+
+.primary-btn:hover {
+    background-color: var(--color-secondary-accent);
+    color: var(--color-text-dark);
+    border-color: var(--color-secondary-accent);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--color-primary-accent);
+    border: 2px solid var(--color-primary-accent);
+}
+
+.secondary-btn:hover {
+    background-color: var(--color-primary-accent);
+    color: var(--color-text-light);
+}
+
+/* Header Section */
+header {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo specific styles */
+.logo a {
+    display: flex; /* Use flexbox for easy alignment of image and text */
+    align-items: center; /* Vertically center them */
+    color: var(--color-secondary-accent); /* Ensure link color for logo is correct */
+    text-decoration: none; /* Remove underline from logo link */
+}
+
+.logo h1 {
+    margin: 0;
+    color: var(--color-secondary-accent);
+    font-size: 2.5em; /* Default font size */
+    display: inline-block; /* Makes h1 sit next to the image */
+    vertical-align: middle;
+}
+
+.site-logo {
+    max-height: 100px; /* Adjust as needed for your logo's height */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns image nicely with text */
+    margin-right: 15px; /* Space between logo and text */
+    border-radius: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--color-text-light);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secondary-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1541249969695-17a4c7e6c9e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw0fHxwZXJmdW1lJTIwYm90dGxlc3xlbnwwfHx8fDE3MTY4ODk5MjB8MA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjust as needed */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--color-text-light);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: var(--color-text-light);
+}
+
+/* Services Section */
+.services-section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-background-light);
+}
+
+.services-section h3 {
+    font-size: 3em;
+    margin-bottom: 60px;
+    color: var(--color-primary-accent);
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: var(--color-card-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h4 {
+    color: var(--color-primary-accent);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.service-card ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--color-text-dark);
+}
+
+.service-card ul li::before {
+    content: '✓';
+    color: var(--color-secondary-accent);
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Our Collection Section Styles */
+.collection-section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-background-light);
+}
+
+.collection-section h3 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: var(--color-primary-accent);
+}
+
+.collection-intro {
+    font-size: 1.2em;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+}
+
+.fragrance-category {
+    background-color: var(--color-card-background);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.fragrance-category:hover {
+    transform: translateY(-5px);
+}
+
+.fragrance-category h4 {
+    font-size: 2em;
+    color: var(--color-primary-accent);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--color-background-medium);
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.fragrance-list {
+    list-style: none;
+    padding: 0;
+    columns: 2; /* Two columns for the list items on wider screens */
+    column-gap: 40px; /* Space between columns */
+}
+
+.fragrance-list li {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--color-text-dark);
+    line-height: 1.5;
+}
+
+.fragrance-list li::before {
+    content: '•'; /* Simple bullet point */
+    color: var(--color-secondary-accent); /* Gold bullet point */
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.fragrance-list li em {
+    font-style: normal;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.collection-cta {
+    font-size: 1.2em;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+}
+
+/* NEW: Website Development Section Styles */
+.web-dev-section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-background-medium); /* Slightly different background for visual separation */
+}
+
+.web-dev-section h3 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: var(--color-primary-accent);
+}
+
+.web-dev-intro {
+    font-size: 1.2em;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+}
+
+.web-dev-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.feature-card {
+    background-color: var(--color-card-background);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 30px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h4 {
+    font-size: 1.8em;
+    color: var(--color-secondary-accent); /* Using gold for feature titles */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feature-card p {
+    font-size: 1em;
+    color: var(--color-text-dark);
+}
+
+.web-dev-cta {
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-background-medium);
+}
+
+.contact-section h3 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: var(--color-primary-accent);
+}
+
+.contact-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-btn i {
+    font-size: 1.4em;
+}
+
+.email-btn {
+    background-color: var(--color-gmail);
+    color: var(--color-text-light);
+}
+
+.email-btn:hover {
+    /* Using a direct color for hover as CSS custom properties don't support darken() */
+    background-color: #bb3d30;
+}
+
+.whatsapp-btn {
+    background-color: var(--color-whatsapp);
+    color: var(--color-text-light);
+}
+
+.whatsapp-btn:hover {
+    background-color: #20b85a;
+}
+
+/* NEW: Phone button style */
+.phone-btn {
+    background-color: var(--color-primary-accent); /* Deep Plum Purple */
+    color: var(--color-text-light);
+}
+
+.phone-btn:hover {
+    background-color: var(--color-secondary-accent); /* Soft Gold on hover */
+    color: var(--color-text-dark);
+}
+
+
+.location-info {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .logo h1 {
+        font-size: 2em;
+    }
+    .nav-links li {
+        margin-left: 20px;
+    }
+    .hero-content h2 {
+        font-size: 3em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+    .service-container, .web-dev-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card, .feature-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 0 10px 10px 10px;
+    }
+    .hero {
+        padding: 100px 20px;
+        height: 60vh;
+    }
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .services-section, .collection-section, .web-dev-section, .contact-section {
+        padding: 80px 20px;
+    }
+    .services-section h3, .collection-section h3, .web-dev-section h3, .contact-section h3 {
+        font-size: 2.5em;
+    }
+    .service-card h4 {
+        font-size: 1.8em;
+    }
+    .fragrance-list {
+        columns: 1; /* Single column on smaller screens */
+    }
+    .fragrance-category {
+        padding: 30px;
+    }
+    .fragrance-category h4 {
+        font-size: 1.8em;
+    }
+    .collection-intro, .collection-cta, .contact-intro, .location-info, .web-dev-intro, .web-dev-cta {
+        font-size: 1.1em;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-btn {
+        width: 80%; /* Make buttons wider on small screens */
+        max-width: 300px;
+    }
+    .feature-card {
+        padding: 25px;
+    }
+    .feature-card h4 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.8em;
+    }
+    .hero-content h2 {
+        font-size: 2em;
+    }
+    .services-section h3, .collection-section h3, .web-dev-section h3, .contact-section h3 {
+        font-size: 2em;
+    }
+    .fragrance-category h4 {
+        font-size: 1.5em;
+    }
+    .fragrance-list li {
+        font-size: 1em;
+    }
+}
